@@ -1,0 +1,60 @@
+git commit
+Usage: git commit -m “[ Type in the commit message]”  
+This command records or snapshots the file permanently in the version history.
+
+Usage: git commit -a  
+This command commits any files you’ve added with the git add command and also commits any files you’ve changed since then.
+
+git diff
+Usage: git diff  
+This command shows the file differences which are not yet staged.
+Usage: git diff [first branch] [second branch]  
+This command shows the differences between the two branches mentioned.
+
+git reset
+Usage: git reset [file]  
+This command unstages the file, but it preserves the file contents.
+git status
+Usage: git status  
+This command lists all the files that have to be committed.
+
+git rm
+Usage: git rm [file]  
+This command deletes the file from your working directory and stages the deletion.
+
+git log
+Usage: git log  
+This command is used to list the version history for the current branch.
+Usage: git log –follow[file]  
+This command lists version history for a file, including the renaming of files also.
+
+git branch
+Usage: git branch  
+This command lists all the local branches in the current repository.
+git merge
+Usage: git merge [branch name]  
+This command merges the specified branch’s history into the current branch.
+
+git remote
+Usage: git remote add [variable name] [Remote Server Link]  
+This command is used to connect your local repository to the remote server.
+
+git push
+Usage: git push [variable name] master  
+This command sends the committed changes of master branch to your remote repository.
+Usage: git push [variable name] [branch]  
+This command sends the branch commits to your remote repository.
+Usage: git push –all [variable name]  
+This command pushes all branches to your remote repository.
+Usage: git push [variable name] :[branch name]  
+This command deletes a branch on your remote repository.
+
+git pull
+Usage: git pull [Repository Link]  
+This command fetches and merges changes on the remote server to your working directory.
+
+
+git clone
+git-clone - Clone a repository into a new directory
+Clones a repository into a newly created directory, creates remote-tracking branches for each branch in the cloned repository
+

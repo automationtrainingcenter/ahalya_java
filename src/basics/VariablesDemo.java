@@ -60,9 +60,20 @@ public class VariablesDemo {
 //		accessing instance variable
 		VariablesDemo obj = new VariablesDemo();
 		System.out.println(obj.iVar);
+		obj.iVar = "object modified instance variable";
+		System.out.println(obj.iVar);
+		
+		VariablesDemo obj1 = new VariablesDemo();
+		System.out.println(obj1.iVar);
+		obj1.iVar = "object 1 modified instance variable";
+		System.out.println(obj1.iVar);
+		
 		
 //		accessing static variable
-		System.out.println(VariablesDemo.sVar);
+		System.out.println("static variable value before changing "+obj.sVar);
+		obj.sVar = "modified static variable";
+		System.out.println("static variable value after changeing "+obj.sVar);
+		System.out.println("static variable value after changeing "+obj1.sVar);
 	}
 
 }

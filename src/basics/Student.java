@@ -15,5 +15,6 @@ public class Student {
 		s2.name = "chandaana";
 		System.out.println(s2.name+"------------"+s2.instituteName);
 	}
+	
 
 }

@@ -66,31 +66,41 @@ public class ArraysDemo {
 		System.out.println(marks[5]);
 
 //		initialization of an array
-		int[] a = { 1, 2, 3, 4, 5, 6, 7, 8 };
+		int[] nums = { 1, 2, 3, 4, 5, 6, 7, 8 };
+
+//		for each loop
+		for (int num : nums) {
+			System.out.print(num + "\t");
+		}
 
 //		length of the array
-		System.out.println("number of elements of a array is " + a.length);
+		System.out.println("number of elements of a array is " + nums.length);
 
 //		2D array
 		int[][] numbers = new int[2][2];
 
 //		store the data in array
-		numbers[0][0] = 1;
-		numbers[0][1] = 0;
-		numbers[1][0] = 0;
-		numbers[1][1] = 1;
+		numbers[0][0] = 11;
+		numbers[0][1] = 10;
+		numbers[1][0] = 10;
+		numbers[1][1] = 11;
 
-		System.out.print(numbers[0][0] + "\t");
-		System.out.print(numbers[0][1] + "\n");
-		System.out.print(numbers[1][0] + "\t");
-		System.out.print(numbers[1][1] + "\n");
+//		retrieve data using for loop
+		for (int i = 0; i < 2; i++) {
+			for (int j = 0; j < 2; j++) {
+				System.out.print(numbers[i][j]+"\t");
+			}
+			System.out.println();
+		}
 
 //		initialize the 2D array
 		String[][] names = { { "ahalya", "lakshmi" }, { "chandana", "spandana" } };
-		System.out.println(names[0][0]);
-		System.out.println(names[0][1]);
-		System.out.println(names[1][0]);
-		System.out.println(names[1][1]);
-
+		
+//		retriving data using for each loop
+		for(String[] name : names) {
+			for(String n : name) {
+				System.out.println(n);
+			}
+		}
 	}
 }

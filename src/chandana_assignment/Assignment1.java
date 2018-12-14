@@ -1,7 +1,10 @@
 package chandana_assignment;
 
+import java.util.Scanner;
+
 public class Assignment1 {
 	// write a method to find out given character is vowel or not using if else statement
+	
 	
 	// write a method to verify given number is palindrome or not
 	
@@ -20,7 +23,23 @@ public class Assignment1 {
 	
 	//create a main method and call all the above methods
 	
-	
+	public static void main(String[] args) {
+		char[] vowels = {'a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'};
+		System.out.println("enter a character");
+		char ch = new Scanner(System.in).next().charAt(0);
+		boolean flag =false;
+		for(char vowel : vowels) {
+			if(ch == vowel) {
+				flag = true;
+				break;
+			}
+		}
+		if(flag)
+			System.out.println("character is vowel");
+		else
+			System.out.println("character is not a vowel");
+		
+	}
 	
 	
 

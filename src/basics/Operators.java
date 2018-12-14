@@ -168,7 +168,7 @@ public class Operators {
 		System.out.printf("a & b is " + (a & b));//0001 = 1
 		// |
 		System.out.printf("a | b is " + (a | b));//0111 = 7
-
+        
 	}
 
 	public static void main(String[] args) {

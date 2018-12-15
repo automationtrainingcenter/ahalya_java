@@ -11,22 +11,55 @@ package class_and_constructors;
 public class EmployeeClass {
 	
 	String empName;
-	int id;
+	int id ;
 	String designation;
 	String address;
 	double salary;
+	String panNum;
+	String aadharNum;
+	static int i = 100;
+	
+//	default constructor
+	private EmployeeClass() {
+		this.id = i;
+		i++;
+	}
+	
+//	parameterized constructor
+	public EmployeeClass(String empName, String designation, double salary, String address) {
+		this();
+		this.empName = empName;
+		this.designation = designation;
+		this.salary = salary;
+		this.address = address;
+	}
+	
+	public EmployeeClass(String empName, String designation, double salary, String address, String panNum) {
+		this(empName, designation, salary, address);
+		this.panNum = panNum;
+	}
+	
+	public EmployeeClass(String empName, String designation, String address, double salary, String aadharNum) {
+		this(empName, designation, salary, address);
+		this.aadharNum = aadharNum;
+	}
+	
+	public EmployeeClass(String empName, String designation, double salary, String address, String panNum, String aadaharNum) {
+		this(empName, designation, salary, address, panNum);
+		this.aadharNum = aadaharNum;
+	}
 	
 	public void updateAddress(String newAddress) {
-		address = newAddress;
+		this.address = newAddress;
 	}
 	
 	public void hikeSalary(double hikePercentage) {
-		salary = salary + (salary * hikePercentage * 0.01);
+		this.salary = this.salary + (this.salary * hikePercentage * 0.01);
 	}
 	
 	public void upgradeDesignation(String newDesignation) {
-		designation = newDesignation;
-		hikeSalary(15);
+		this.designation = newDesignation;
+		this.hikeSalary(15);
 	}
 	
 	public void displayEmployeeDetails() {
@@ -42,30 +75,27 @@ public class EmployeeClass {
 	
 	public static void main(String[] args) {
 //		create an object of EmployeeClass
-		EmployeeClass chandana = new EmployeeClass();
-		chandana.empName = "sri lakshmi";
-		chandana.id = 101;
-		chandana.designation = "sr tester";
-		chandana.address = "lingampally";
-		chandana.salary = 45000.0;
+		EmployeeClass chandana = new EmployeeClass("sri lakshmi", "sr tester", 45000, "lingampally", "aapp1122k");
 		chandana.displayEmployeeDetails();
 		chandana.updateAddress("kukatpally");
 		chandana.hikeSalary(10);
 		chandana.displayEmployeeDetails();
 //		chandana.salary = 20000;
 //		chandana.displayEmployeeDetails();
+//		
 		
-		
-		EmployeeClass ahalya = new EmployeeClass();
-//		ahalya.empName = "ahalya manne";
-//		ahalya.id = 102;
-//		ahalya.designation = "jr tester";
-//		ahalya.address = "lingampally";
-//		ahalya.salary = 35000.0;
-//		ahalya.displayEmployeeDetails();
-//		ahalya.upgradeDesignation("sr tester");
-//		ahalya.updateAddress("hitech city");
+		EmployeeClass ahalya = new EmployeeClass("ahalya", "jr tester", 35000, "chandanagar", "aaqq2233o", "987654321234");
 		ahalya.displayEmployeeDetails();
+		ahalya.upgradeDesignation("sr tester");
+		ahalya.updateAddress("hitech city");
+		ahalya.displayEmployeeDetails();
+
+
+		EmployeeClass lakshmi = new EmployeeClass("lakshmi", "jr tester", 35000, "kukatpally");
+		lakshmi.displayEmployeeDetails();
+		
+		
+		
 		
 		
 	}

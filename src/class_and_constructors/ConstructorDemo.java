@@ -33,9 +33,10 @@ public class ConstructorDemo {
 		name = "surya";
 	}
 	
-	public ConstructorDemo(int i, String n) {
-		id = i;
-		name = n;
+//	parameterized
+	public ConstructorDemo(int id, String name) {
+		this.id = id;
+		this.name = name;
 	}
 	
 	public void display() {

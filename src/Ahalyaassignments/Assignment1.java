@@ -6,6 +6,7 @@ public class Assignment1 {
 	static Scanner s;
 	// write a method to find out given character is vowel or not using if else statement
 	public void vowelOrNot() {
+		
 		int i=0;
 		char ch;
 		System.out.println("enter a character");
@@ -28,12 +29,70 @@ public class Assignment1 {
 	}
 	
 	// write a method to verify given number is palindrome or not
+	 
+	public void Palindrome()
+	{
+        int num=0;
+		
+		int rev=0,rem;
+		System.out.println("enter a number");
+		Scanner s=new Scanner(System.in);
+		num=s.nextInt();
+		int temp=num;
+		
+		while(num>0)
+		{
+			rem=num%10;
+			rev=rev*10+rem;
+			num=num/10;
+			
+		}
+		if(temp==rev)
+		{
+			System.out.println("Number is a palindrome");
+		}
+		else
+		{
+			System.out.println("Number is not a palindrome");
+		}
+	}
+	
 	
 	// write a method to find factorial of a given number
+	public void Factorial()
+	{
+	long factorial=1;
+	int n=5;
+	for(int i=1;i<=n;i++)
+	{
+		factorial=factorial*i;
+	}
+	System.out.println("factorial of 5 is:"+factorial);
+	}
+		
+	
+	
 	
 	// write a method to verify given number is prime or not
+	public void Prime()
+	{
+		int number=13;
+		if(number/2==0)
+		{
+			System.out.println("num is not prime");
+		}
+		else
+		{
+			System.out.println("num is prime");
+		}
+		
+		
+	}
 	
+	
+
 	// write a method to find sum and average of an array
+	
 	
 	// write a method to search an element in an array
 	
@@ -48,8 +107,11 @@ public class Assignment1 {
 		s = new Scanner(System.in);
 		Assignment1 obj = new Assignment1();
 		obj.vowelOrNot();
-		int n = 5, i =1;
-		System.out.println(n+" * "+i+" = "+n*i);
+		obj.Palindrome();
+		obj.Factorial();
+		obj.Prime();
+//		int n = 5, i =1;
+//		System.out.println(n+" * "+i+" = "+n*i);
 		
 	}
 	

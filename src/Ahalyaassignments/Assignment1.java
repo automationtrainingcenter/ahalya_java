@@ -73,19 +73,90 @@ public class Assignment1 {
 				break;
 			}
 		}
-		if(flag) {
+		if (flag) {
 			System.out.println("num is prime");
-		}else {
+		} else {
 			System.out.println("num is not prime");
 		}
 
 	}
 
 	// write a method to find sum and average of an array
+	public void Array()
+	{
+		int sum=0;
+		float average;
+		Scanner s=new Scanner(System.in);
+		System.out.println("enter no of elements in an array:");
+		int n=s.nextInt();
+		int a[]=new int[n];
+		System.out.println("enter all elements:");
+		for(int i=0;i<n;i++)
+		{
+			a[i]=s.nextInt();
+			sum=sum+a[i];
+		}
+		
+			System.out.println("sum of array is:"+sum);	
+			average=(float)sum/n;
+			System.out.println("average of array is:"+average);
+			
+				
+				
+		
+	}
 
 	// write a method to search an element in an array
+	public void Search()
+	{
+		int i=0,n,x,flag=0;
+		Scanner s=new Scanner(System.in);
+		System.out.println("enter number of elements in array:");
+		n=s.nextInt();
+		int a[]=new int[n];
+		System.out.println("enter all the elements:");
+		for(i=0;i<n;i++)
+		{
+			a[i]=s.nextInt();
+		}
+		System.out.println("enter the element you want to search:");
+		x=s.nextInt();
+		for(i=0;i<n;i++)
+		{
+			if(a[i]==x)
+			{
+				flag=1;
+				break;
+			}
+			else
+			{
+				flag=0;
+			}
+		}
+		if(flag==1)
+		{
+			System.out.println("element found at position:"+(i+1));
+		}
+		else
+		{
+			System.out.println("element not found");
+		}
+	}
 
 	// write a method to reverse the given string
+	public void ReverseString()
+	{
+		String original,reverse="";
+		Scanner s=new Scanner(System.in);
+		System.out.println("enter a string to reverse:");
+		original=s.next();
+		int length=original.length();
+		for(int i=length-1;i>=0;i--)
+			reverse=reverse+original.charAt(i);
+		System.out.println("reversed string is :"+reverse);
+		
+	}
+	
 
 	// write a method which will convert the case of alternate words of a string
 	// ex: This is a sample string after conversion THIS is A sample STRING
@@ -95,10 +166,14 @@ public class Assignment1 {
 	public static void main(String[] args) {
 		s = new Scanner(System.in);
 		Assignment1 obj = new Assignment1();
-//		obj.vowelOrNot();
-//		obj.Palindrome();
-//		obj.Factorial();
+		obj.vowelOrNot();
+		obj.Palindrome();
+		obj.Factorial();
 		obj.Prime(18);
+		obj.Array();
+		obj.Search();
+		obj.ReverseString();
+		
 //		int n = 5, i =1;
 //		System.out.println(n+" * "+i+" = "+n*i);
 

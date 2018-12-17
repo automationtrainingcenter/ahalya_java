@@ -72,8 +72,9 @@ public class ArraysDemo {
 		for (int num : nums) {
 			System.out.print(num + "\t");
 		}
+		
 
-//		length of the array
+//		length of the Iarray
 		System.out.println("number of elements of a array is " + nums.length);
 
 //		2D array

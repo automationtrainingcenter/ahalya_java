@@ -20,6 +20,7 @@ public class Assignment1 {
 	
 	
 	
+	
 	// write a method to verify given number is palindrome or not
               
 
@@ -27,8 +28,7 @@ public class Assignment1 {
    {
     int num, rem, orig, rev=0;
     Scanner scan = new Scanner(System.in);
-	
-    System.out.print("Enter a Number : ");
+	    System.out.print("Enter a Number : ");
     num = scan.nextInt();
 	
     orig = num;
@@ -58,8 +58,7 @@ public class Assignment1 {
     {
         int n, i, fact=1;
         Scanner s = new Scanner(System.in);
-		
-        System.out.print("Enter a Number : ");
+	    System.out.print("Enter a Number : ");
         n = s.nextInt();
 		
         for(i=n; i>0; i--)
@@ -179,8 +178,10 @@ public class Assignment1 {
 	
 
 	
+
 	//create a main method and call all the above methods
 	
+
 	
 	public static void main(String args[])
 	{

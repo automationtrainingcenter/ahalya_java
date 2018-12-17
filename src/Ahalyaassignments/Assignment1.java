@@ -117,6 +117,7 @@ public class Assignment1 {
 		System.out.println("enter all the elements:");
 		for(i=0;i<n;i++)
 		{
+			System.out.println("enter element "+i);
 			a[i]=s.nextInt();
 		}
 		System.out.println("enter the element you want to search:");
@@ -128,14 +129,10 @@ public class Assignment1 {
 				flag=1;
 				break;
 			}
-			else
-			{
-				flag=0;
-			}
 		}
-		if(flag==1)
+		if (flag == 1)
 		{
-			System.out.println("element found at position:"+(i+1));
+			System.out.println("element found at position:"+(i));
 		}
 		else
 		{
@@ -166,13 +163,13 @@ public class Assignment1 {
 	public static void main(String[] args) {
 		s = new Scanner(System.in);
 		Assignment1 obj = new Assignment1();
-		obj.vowelOrNot();
-		obj.Palindrome();
-		obj.Factorial();
-		obj.Prime(18);
-		obj.Array();
+//		obj.vowelOrNot();
+//		obj.Palindrome();
+//		obj.Factorial();
+//		obj.Prime(18);
+//		obj.Array();
 		obj.Search();
-		obj.ReverseString();
+//		obj.ReverseString();
 		
 //		int n = 5, i =1;
 //		System.out.println(n+" * "+i+" = "+n*i);

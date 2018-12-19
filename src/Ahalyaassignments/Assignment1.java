@@ -157,19 +157,39 @@ public class Assignment1 {
 
 	// write a method which will convert the case of alternate words of a string
 	// ex: This is a sample string after conversion THIS is A sample STRING
+	public void stringCaseConversion()
+	{
+		System.out.println("enter a string:");
+		String str=s.nextLine();
+		String[] words = str.split(" ");
+//		char[] chars=str.toCharArray();
+		String convertedStr="";
+		for(int i=0;i<words.length;i++)
+		{
+			if(i%2==0)
+			{
+				words[i]=words[i].toUpperCase();
+			}
+			convertedStr=convertedStr+words[i];
+		}
+		
+		System.out.println("converted string is:"+convertedStr);
+		
+	}
 
 	// create a main method and call all the above methods
 
 	public static void main(String[] args) {
 		s = new Scanner(System.in);
 		Assignment1 obj = new Assignment1();
-//		obj.vowelOrNot();
-//		obj.Palindrome();
-//		obj.Factorial();
-//		obj.Prime(18);
-//		obj.Array();
+		obj.vowelOrNot();
+		obj.Palindrome();
+		obj.Factorial();
+		obj.Prime(18);
+		obj.Array();
 		obj.Search();
-//		obj.ReverseString();
+		obj.ReverseString();
+		obj.stringCaseConversion();
 		
 //		int n = 5, i =1;
 //		System.out.println(n+" * "+i+" = "+n*i);

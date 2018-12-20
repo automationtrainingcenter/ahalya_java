@@ -18,5 +18,11 @@ public class CurrentAccount extends Account{
 		// TODO Auto-generated constructor stub
 	}
 	
+	@Override
+	public double withdraw(double amount) {
+		System.out.println("current accoutn withdraw");
+		return amount;
+	}
+	
 
 }

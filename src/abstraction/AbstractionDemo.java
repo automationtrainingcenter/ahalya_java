@@ -1,4 +1,7 @@
 package abstraction;
+
+import abstraction.OuterClass.InnerClass;
+
 /*
  * Abstraction means a plan or template to create a class
  * Abstraction means hiding the implementation details
@@ -30,25 +33,46 @@ package abstraction;
  * Marker or tagged interface
  * 	it is an interface without any abstract methods like Serializable, Clonable .etc
  * 	Generally these interfaces provides special instructions to the JVM
- * 	we can common parent to the multiple classes or interfaces
+ * 	we can have common parent to the multiple classes or interfaces
  * 
  * Functional interfaces
  * 	it is an interface with only one abstract method.
- * A class can implement this functional interface or we can write a lambda expresssion which will implement 
+ * A class can implement this functional interface or we can write a lambda expression which will implement 
  * the abstract method of functional interface
  */
 public class AbstractionDemo {
-	
+
 	public static void main(String[] args) {
 		AbstractClass aObj = new AbstractClassChild();
 		aObj.methodOne();
 		aObj.methodTwo();
-		
+
 		InterfaceDemo iObj = new InterfaceImpl();
 		iObj.defaultMethod();
 		InterfaceDemo.staticMethod();
 		iObj.add();
 		iObj.sub();
+
+		InnerInterfaceDemo inObj = new InnerInterfaceDemoImpl();
+		inObj.outerMethod();
+//		inObj.innerMethod();
+		inObj.method().innerMethod();
+
+		OuterClass oObj = new OuterClass();
+		InnerClass icObj = oObj.new InnerClass();
+		icObj.methodTwo();
+
+//		functional interface
+//		FuncInterface fObj = new FuncInterface() {
+//			@Override
+//			public int add(int a, int b) {
+//				return a+b;
+//			}
+//		};
+
+		FuncInterface fObj = (x, y) -> x + y;
+
+		System.out.println(fObj.add(20, 30));
 	}
 
 }

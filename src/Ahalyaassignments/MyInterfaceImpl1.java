@@ -1,6 +1,6 @@
 package Ahalyaassignments;
 
-public class MyInterfaceImpl1 implements MyInterface1
+public class MyInterfaceImpl1 implements MyInterface1,  MyInterface1.MyInterface2
 {
 
 	@Override
@@ -11,6 +11,12 @@ public class MyInterfaceImpl1 implements MyInterface1
 
 	@Override
 	public void method2(String id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void method3() {
 		// TODO Auto-generated method stub
 		
 	}

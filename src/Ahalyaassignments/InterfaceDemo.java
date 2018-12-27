@@ -1,6 +1,7 @@
 package Ahalyaassignments;
 interface Abc
 {
+//	by default all methods in interface are public and abstracts
 	void home();
 	void flat();
 }

@@ -2,17 +2,17 @@ package Ahalyaassignments;
 
 abstract class Abcc
 {
-	 abstract void floor();
-	 abstract void plot();
+	 public abstract void floor();
+	 public abstract void plot();
 	
 }
 class Xyzz extends Abcc
 {
-	 void floor()
+	public void floor()
 	{
 		System.out.println("floor");
 	}
-	 void plot()
+	 public void plot()
 	{
 		System.out.println("plot");
 	}

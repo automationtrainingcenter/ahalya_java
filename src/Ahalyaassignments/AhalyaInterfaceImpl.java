@@ -5,13 +5,13 @@ public class AhalyaInterfaceImpl implements AhalyaInterface,AhalyaInterface.AhaI
 
 	@Override
 	public void insideMethod() {
-		// TODO Auto-generated method stub
+		System.out.println("this is inside method");
 		
 	}
 
 	@Override
 	public void outsideMethod() {
-		// TODO Auto-generated method stub
+		System.out.println("this is outside method");
 		
 	}
 

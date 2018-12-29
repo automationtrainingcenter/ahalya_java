@@ -8,6 +8,7 @@ public class AhalyaMainClass
 	Aobj.insideMethod();
 	AhalyaInterface Aobj1= new AhalyaInterfaceImpl();
 	Aobj1.outsideMethod();
+	Aobj1.method().insideMethod();
 		
 	}
 
